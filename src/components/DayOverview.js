@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { celsiusToFahrenheit } from '../utils/units';
+import {
+  CELSIUS,
+  FAHRENHEIT,
+  celsiusToFahrenheit,
+  roundUnitValue
+} from '../utils/units';
 import { iconUrl } from '../utils/weatherbit';
 
 function DayOverview(props) {
@@ -18,10 +23,12 @@ function DayOverview(props) {
         {description}
       </p>
       <p className="attribute-value">
-        {temp} &#8451;
+        {roundUnitValue(CELSIUS, temp)}
+        <span className="attribute-unit" dangerouslySetInnerHTML={{__html: CELSIUS }} />
       </p>
       <p className="attribute-value">
-      {celsiusToFahrenheit(temp)} &#8457;
+        {roundUnitValue(FAHRENHEIT, celsiusToFahrenheit(temp))}
+        <span className="attribute-unit" dangerouslySetInnerHTML={{__html: FAHRENHEIT }} />
       </p>
     </div>
   </div>);

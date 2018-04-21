@@ -53,6 +53,10 @@ a.daySelect {
   display: block;
 }
 
+.attribute-unit {
+  margin-left: 5px;
+}
+
 .ForecastDetails .attribute-name,
 .ForecastDetails .attribute-value {
   font-size: 0.8em;
@@ -88,7 +92,6 @@ table.ForecastDetails.table tr td {
 .DayListItem .day-label {
   font-size: 0.9em;
 }
-
 
 .DayListItem .attribute-value {
   font-size: 1.2em;

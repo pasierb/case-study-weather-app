@@ -7,7 +7,11 @@ function DayReport(props) {
   const attributes = [
     'wind_spd',
     'wind_gus_spd',
-    'wind_cdir'
+    'wind_cdir',
+    'pop',
+    'precip',
+    'clouds',
+    'pres'
   ];
 
   return (<div className="columns DayReport">
