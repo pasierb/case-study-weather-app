@@ -74,12 +74,22 @@ table.ForecastDetails.table tr td {
 
 .DayOverview {
   font-weight: 600;
+  font-size: 110%;
+}
+
+.DayOverview .description {
+  font-size: 0.8em;
 }
 
 .DayOverview .day-label {
+  font-size: 1.2em;
+}
+
+.DayListItem .day-label {
   font-size: 0.9em;
 }
 
-.DayOverview .attribute-value {
+
+.DayListItem .attribute-value {
   font-size: 1.2em;
 }

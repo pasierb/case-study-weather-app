@@ -8,23 +8,18 @@ function weatherbitIconSrc(code) {
 
 function DayOverview(props) {
 
-  return (<div className="columns DayOverview">
-    <div className="column has-text-centered">
+  return (<div className="DayListItem">
+    <div className="has-text-centered day-label">
+      {props.date.toLocaleString('en-US', { weekday: 'long' })}
+    </div>
+    <div className="has-text-centered">
       <img src={weatherbitIconSrc(props.iconCode)} alt="weather-icon" />
     </div>
-    <div className="column has-text-centered">
-      <p className="day-label">
-        {props.date.toLocaleString('en-US', { weekday: 'long' })}
-      </p>
-      <p className="description">
-        {props.description}
-      </p>
-      <p className="attribute-value">
+    <div className="has-text-centered attribute-value">
       {props.temp}
-      </p>
-      <p className="attribute-value">
+    </div>
+    <div className="has-text-centered attribute-value">
       {celsiusToFahrenheit(props.temp)}
-      </p>
     </div>
   </div>);
 }
@@ -32,7 +27,6 @@ function DayOverview(props) {
 DayOverview.propTypes = {
   temp: PropTypes.number.isRequired,
   date: PropTypes.instanceOf(Date).isRequired,
-  description: PropTypes.string.isRequired,
   iconCode: PropTypes.string
 }
 

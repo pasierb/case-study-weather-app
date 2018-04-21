@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DayOverview from './DayOverview';
+import DayListItem from './DayListItem';
 
 function DayList(props) {
   return (<div className="columns DayList">
     {props.daysData.map((data) => (
       <div className="column" key={data.ts}>
         <a onClick={props.onSelect.bind(null, data)} className="daySelect">
-          <DayOverview temp={data.temp}
+          <DayListItem temp={data.temp}
             date={new Date(data.datetime)}
             iconCode={data.weather.icon} />
         </a>

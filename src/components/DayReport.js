@@ -16,6 +16,7 @@ function DayReport(props) {
         <h6 className="title is-6 has-text-centered">Local weather report</h6>
         <DayOverview temp={props.dayData.temp}
           date={new Date(props.dayData.datetime)}
+          description={props.dayData.weather.description}
           iconCode={props.dayData.weather.icon} />
       </div>
     </div>
