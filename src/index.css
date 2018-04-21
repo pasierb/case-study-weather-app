@@ -71,3 +71,15 @@ table.ForecastDetails.table tr td {
 .DayList > *:last-child {
   border-right: none;
 }
+
+.DayOverview {
+  font-weight: 600;
+}
+
+.DayOverview .day-label {
+  font-size: 0.9em;
+}
+
+.DayOverview .attribute-value {
+  font-size: 1.2em;
+}

@@ -9,16 +9,16 @@ function weatherbitIconSrc(code) {
 function DayOverview(props) {
 
   return (<div className="DayOverview">
-    <div className="has-text-centered">
+    <div className="has-text-centered day-label">
       {props.date.toLocaleString('en-US', { weekday: 'long' })}
     </div>
     <div className="has-text-centered">
       <img src={weatherbitIconSrc(props.iconCode)} alt="weather-icon" />
     </div>
-    <div className="has-text-centered">
+    <div className="has-text-centered attribute-value">
       {props.temp}
     </div>
-    <div className="has-text-centered">
+    <div className="has-text-centered attribute-value">
       {celsiusToFahrenheit(props.temp)}
     </div>
   </div>);
