@@ -31,6 +31,7 @@ body {
 .box {
   color: #fff;
   background: rgba(0,0,0, 0.1);
+  height: 100%;
 }
 
 .table {
