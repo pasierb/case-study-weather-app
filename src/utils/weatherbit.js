@@ -13,3 +13,7 @@ export function fetchDaily(params) {
     toPairs(query).map(pair => pair.join('=')).join('&')
   ].join('?'));
 }
+
+export function iconUrl(code) {
+  return ['https://www.weatherbit.io/static/img/icons/', code, '.png'].join('');
+}
