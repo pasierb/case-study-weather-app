@@ -18,10 +18,10 @@ function DayOverview(props) {
         {description}
       </p>
       <p className="attribute-value">
-      {temp}
+        {temp} &#8451;
       </p>
       <p className="attribute-value">
-      {celsiusToFahrenheit(temp)}
+      {celsiusToFahrenheit(temp)} &#8457;
       </p>
     </div>
   </div>);

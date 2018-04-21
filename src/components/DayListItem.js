@@ -14,10 +14,10 @@ function DayOverview(props) {
       <img src={iconUrl(iconCode)} alt="weather-icon" />
     </div>
     <div className="has-text-centered attribute-value">
-      {temp}
+      {temp} &#8451;
     </div>
     <div className="has-text-centered attribute-value">
-      {celsiusToFahrenheit(temp)}
+      {celsiusToFahrenheit(temp)} &#8457;
     </div>
   </div>);
 }
