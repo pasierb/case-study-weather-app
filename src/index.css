@@ -11,5 +11,15 @@ body {
 }
 
 .box {
+  color: #fff;
   background: rgba(0,0,0, 0.1);
+}
+
+.table {
+  color: #fff;
+  background: none;
+}
+
+.table td {
+  border: 0;
 }

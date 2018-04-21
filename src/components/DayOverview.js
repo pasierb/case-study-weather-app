@@ -7,7 +7,7 @@ function weatherbitIconSrc(code) {
 
 function DayOverview(props) {
 
-  return (<div className="DayOverview">
+  return (<div className="DayOverview" onClick={props.onSelect}>
     <div className="has-text-centered">
       {props.date.toLocaleString('en-US', { weekday: 'long' })}
     </div>
@@ -23,7 +23,8 @@ function DayOverview(props) {
 DayOverview.propTypes = {
   temp: PropTypes.number.isRequired,
   date: PropTypes.instanceOf(Date).isRequired,
-  iconCode: PropTypes.string
+  iconCode: PropTypes.string,
+  onSelect: PropTypes.func
 }
 
 export default DayOverview;

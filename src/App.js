@@ -26,24 +26,54 @@ class App extends Component {
     })
   }
 
+  setSelected(data) {
+    this.setState({
+      selected: data
+    });
+  }
+
   render() {
     const selected = this.state.selected;
+    const attributes = [
+      'wind_spd',
+      'wind_gus_spd',
+      'wind_cdir'
+    ]
 
     return (
       <div className="App">
-        <div className="columns">
-          <div className="column box">
-            {selected && <DayOverview temp={selected.temp} date={new Date(selected.datetime)} iconCode={selected.weather.icon} />}
+        {selected && <div className="columns">
+          <div className="column">
+            <div className="box">
+            {selected && <DayOverview temp={selected.temp}
+              date={new Date(selected.datetime)}
+              iconCode={selected.weather.icon} />}
+            </div>
           </div>
           <div className="column">
-          </div>
-        </div>
-        <div className="columns box">
-          {this.state.dailyData.map(({ temp, datetime, ts, weather }) => (
-            <div className="column" key={ts}>
-              <DayOverview temp={temp} date={new Date(datetime)} iconCode={weather.icon} />
+            <div className="box">
+              <table className="table is-narrow is-fullwidth">
+                <tbody>
+                  {attributes.map(attr => (<tr key={attr}>
+                    <td>{attr}</td>
+                    <td className="has-text-right">{selected[attr]}</td>
+                  </tr>))}
+                </tbody>
+              </table>
             </div>
-          ))}
+          </div>
+        </div>}
+        <div className="box">
+          <div className="columns">
+            {this.state.dailyData.map((data) => (
+              <div className="column" key={data.ts}>
+                <DayOverview temp={data.temp}
+                  date={new Date(data.datetime)}
+                  iconCode={data.weather.icon}
+                  onSelect={this.setSelected.bind(this, data)} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );
