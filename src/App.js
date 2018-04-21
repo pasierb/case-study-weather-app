@@ -32,13 +32,13 @@ class App extends Component {
     return (
       <div className="App">
         <div className="columns">
-          <div className="column">
+          <div className="column box">
             {selected && <DayOverview temp={selected.temp} date={new Date(selected.datetime)} iconCode={selected.weather.icon} />}
           </div>
           <div className="column">
           </div>
         </div>
-        <div className="columns">
+        <div className="columns box">
           {this.state.dailyData.map(({ temp, datetime, ts, weather }) => (
             <div className="column" key={ts}>
               <DayOverview temp={temp} date={new Date(datetime)} iconCode={weather.icon} />
