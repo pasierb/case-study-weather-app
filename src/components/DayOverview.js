@@ -13,7 +13,7 @@ function DayOverview(props) {
       {props.date.toLocaleString('en-US', { weekday: 'long' })}
     </div>
     <div className="has-text-centered">
-      <img src={weatherbitIconSrc(props.iconCode)} />
+      <img src={weatherbitIconSrc(props.iconCode)} alt="weather-icon" />
     </div>
     <div className="has-text-centered">
       {props.temp}

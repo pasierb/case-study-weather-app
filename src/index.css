@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5568ba+0,54d1ab+100 */
   background: #5568ba; /* Old browsers */
   background: -moz-linear-gradient(-45deg, #5568ba 0%, #54d1ab 100%); /* FF3.6-15 */
@@ -20,6 +19,12 @@ body {
   background: none;
 }
 
+.DayReport .title {
+  color: #fff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 10px;
+}
+
 .table td {
   border: 0;
 }
@@ -31,4 +36,15 @@ a.daySelect {
 
 a.daySelect:hover {
   background: rgba(0,0,0, 0.1);
+}
+
+.ForecastDetails .attribute-name,
+.ForecastDetails .attribute-value {
+  font-size: 0.8em;
+
+}
+
+table.ForecastDetails.table tr td {
+  padding: 0;
+  color: rgba(255,255,255, 0.8);
 }

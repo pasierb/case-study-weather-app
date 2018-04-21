@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DayOverview from './components/DayOverview';
+import DayReport from './components/DayReport';
 import DayList from './components/DayList';
 import { fetchDaily } from './utils/weatherbit';
 
@@ -35,36 +35,11 @@ class App extends Component {
 
   render() {
     const selected = this.state.selected;
-    const attributes = [
-      'wind_spd',
-      'wind_gus_spd',
-      'wind_cdir'
-    ]
     const select = this.setSelected.bind(this);
 
     return (
       <div className="App">
-        {selected && <div className="columns">
-          <div className="column">
-            <div className="box">
-            {selected && <DayOverview temp={selected.temp}
-              date={new Date(selected.datetime)}
-              iconCode={selected.weather.icon} />}
-            </div>
-          </div>
-          <div className="column">
-            <div className="box">
-              <table className="table is-narrow is-fullwidth">
-                <tbody>
-                  {attributes.map(attr => (<tr key={attr}>
-                    <td>{attr}</td>
-                    <td className="has-text-right">{selected[attr]}</td>
-                  </tr>))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>}
+        {selected && <DayReport dayData={selected} />}
         <div className="box">
           <DayList daysData={this.state.dailyData} onSelect={select} />
         </div>
