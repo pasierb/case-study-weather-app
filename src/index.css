@@ -34,10 +34,6 @@ a.daySelect {
   display: block;
 }
 
-a.daySelect:hover {
-  background: rgba(0,0,0, 0.1);
-}
-
 .ForecastDetails .attribute-name,
 .ForecastDetails .attribute-value {
   font-size: 0.8em;
@@ -47,4 +43,12 @@ a.daySelect:hover {
 table.ForecastDetails.table tr td {
   padding: 0;
   color: rgba(255,255,255, 0.8);
+}
+
+.DayList > * {
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.DayList > *:last-child {
+  border-right: none;
 }

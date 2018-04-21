@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import DayOverview from './DayOverview';
 
 function DayList(props) {
-  return (<div className="columns">
+  return (<div className="columns DayList">
     {props.daysData.map((data) => (
       <div className="column" key={data.ts}>
         <a onClick={props.onSelect.bind(null, data)} className="daySelect">
