@@ -23,3 +23,7 @@ body {
 .table td {
   border: 0;
 }
+
+a.daySelect {
+  color: #fff;
+}

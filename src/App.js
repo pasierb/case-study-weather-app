@@ -67,10 +67,11 @@ class App extends Component {
           <div className="columns">
             {this.state.dailyData.map((data) => (
               <div className="column" key={data.ts}>
-                <DayOverview temp={data.temp}
-                  date={new Date(data.datetime)}
-                  iconCode={data.weather.icon}
-                  onSelect={this.setSelected.bind(this, data)} />
+                <a onClick={this.setSelected.bind(this, data)} className="daySelect">
+                  <DayOverview temp={data.temp}
+                    date={new Date(data.datetime)}
+                    iconCode={data.weather.icon} />
+                </a>
               </div>
             ))}
           </div>
