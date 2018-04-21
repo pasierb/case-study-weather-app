@@ -1,10 +1,10 @@
 import { toPairs } from 'ramda';
 
-const DAILY_API_URL = 'http://api.weatherbit.io/v2.0/forecast/daily';
+const DAILY_API_URL = 'https://api.weatherbit.io/v2.0/forecast/daily';
 
 export function fetchDaily(params) {
   const query = {
-    key: process.env.WEATHERBIT_API_KEY,
+    key: process.env.REACT_APP_WEATHERBIT_API_KEY,
     ...params
   }
 
