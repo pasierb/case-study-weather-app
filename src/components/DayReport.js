@@ -13,7 +13,7 @@ function DayReport(props) {
   return (<div className="columns DayReport">
     <div className="column">
       <div className="box">
-        <h6 className="title is-6 is-uppercase has-text-centered">Local weather report</h6>
+        <h6 className="title is-6 has-text-centered">Local weather report</h6>
         <DayOverview temp={props.dayData.temp}
           date={new Date(props.dayData.datetime)}
           iconCode={props.dayData.weather.icon} />
@@ -21,7 +21,7 @@ function DayReport(props) {
     </div>
     <div className="column">
       <div className="box">
-        <h6 className="title is-6 is-uppercase has-text-centered">Details</h6>
+        <h6 className="title is-6 has-text-centered">Details</h6>
         <ForecastDetails data={props.dayData} attributes={attributes} />
       </div>
     </div>

@@ -7,6 +7,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      city: 'Wolverhampton',
+      country: 'GB',
       dailyData: [],
       selected: undefined
     };
@@ -39,9 +41,15 @@ class App extends Component {
 
     return (
       <div className="App">
-        {selected && <DayReport dayData={selected} />}
-        <div className="box">
-          <DayList daysData={this.state.dailyData} onSelect={select} />
+        <div className="intro">
+          <h1 className="title is-1">{this.state.city}</h1>
+          <h1 className="subtitle">{this.state.country}</h1>
+        </div>
+        <div className="forecast">
+          {selected && <DayReport dayData={selected} />}
+          <div className="box">
+            <DayList daysData={this.state.dailyData} onSelect={select} />
+          </div>
         </div>
       </div>
     );

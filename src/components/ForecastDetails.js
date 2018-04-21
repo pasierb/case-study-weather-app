@@ -7,7 +7,7 @@ function ForecastDetails(props) {
     <tbody>
       {props.attributes.map(attr => (<tr key={attr}>
         <td>
-          <span className="is-uppercase attribute-name">{translate(attr)}</span>
+          <span className="attribute-name">{translate(attr)}</span>
         </td>
         <td className="has-text-right attribute-value">{props.data[attr]}</td>
       </tr>))}
