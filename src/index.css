@@ -26,4 +26,9 @@ body {
 
 a.daySelect {
   color: #fff;
+  display: block;
+}
+
+a.daySelect:hover {
+  background: rgba(0,0,0, 0.1);
 }
